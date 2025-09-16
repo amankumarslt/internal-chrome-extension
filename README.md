@@ -55,7 +55,7 @@ Say goodbye to juggling tabs or digging through internal systems. With this Chro
 
 ## 📦 Download & Install
 
-🔗 **[Download from GitHub Releases](https://github.com/amankumarslt/internal-chrome-extension)**
+🔗 **[Download from GitHub Releases](https://github.com/amankumarslt/internal-chrome-extension/releases)**
 
 ### Manual Installation:
 
@@ -96,7 +96,7 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Maintainer
 
-Maintained by [@amankumarslt](https://github.com/amankumarslt)
+Maintained by [@rapid](https://github.com/amankumarslt)
 
 ---
 
