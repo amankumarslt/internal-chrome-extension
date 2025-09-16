@@ -1,12 +1,20 @@
 {
   "manifest_version": 3,
   "name": "LambdaTest Search Extension",
-  "version": "1.0",
+  "version": "1.1.2",
   "description": "Search for organizations and users on LambdaTest backend",
   "permissions": ["tabs"],
   "host_permissions": ["https://backend-app.lambdatest.com/*"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "Final.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B"
+      },
+      "description": "Open LambdaTest popup"
+    }
   }
 }
