@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const webTestIdInput = document.getElementById('webTestId');
   const webSearchBtn = document.getElementById('webSearch');
+  
+  // const Appautomation = document.getElementById('appAutomationId')
+  // const Appautomationbtn = document.getElementById('appAutomationSearch')
+  
 
   // Auto search for org when 7 digits
   orgIdInput.addEventListener('input', function() {
