@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LambdaTest Search Extension",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "Search for organizations and users on LambdaTest backend",
   "permissions": ["tabs"],
   "host_permissions": ["https://backend-app.lambdatest.com/*"],
