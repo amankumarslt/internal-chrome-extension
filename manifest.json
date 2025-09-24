@@ -16,5 +16,11 @@
       },
       "description": "Open LambdaTest popup"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://backend-app.lambdatest.com/resources/users*"],
+      "js": ["content.js"]
+    }
+  ]
 }
