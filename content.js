@@ -9,7 +9,7 @@
         const customBtn = document.createElement("button");
         customBtn.innerText = "Assume Identity";
         customBtn.style.cssText =
-            "position: fixed; top: 80px; right: 48px; z-index: 9999; background: #4f46e5; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;";
+            "position: fixed; top: 5em; right: 3em; z-index: 9999; background: #18b68b; color: #1e392b ; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;";
         document.body.appendChild(customBtn);
 
         customBtn.addEventListener("click", async () => {
