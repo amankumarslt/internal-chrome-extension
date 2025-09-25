@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const webTestIdInput = document.getElementById('webTestId');
   const webSearchBtn = document.getElementById('webSearch');
 
+  const sumoOrgIdInput = document.getElementById('sumoOrgId');
+  const sumoSearchBtn = document.getElementById('sumoSearch');
+
   // Auto search for org when 7 digits
   orgIdInput.addEventListener('input', function() {
     const value = orgIdInput.value;
@@ -118,6 +121,31 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Enter' && webTestIdInput.value.trim()) {
       const testIdW = webTestIdInput.value.trim();
       const url = `https://retina.lambdatest.com/dashboard/?testId=${encodeURIComponent(testIdW)}`;
+      chrome.tabs.create({ url: url });
+    }
+  });
+
+  // Sumo Logic Dashboard
+  sumoOrgIdInput.addEventListener('input', function() {
+    const value = sumoOrgIdInput.value;
+    if (value.length === 7 && !isNaN(Number(value))) {
+      const url = `https://service.sumologic.com/dashboard/QtkYSqtFAfl04GZbsJnXDQ82RooCDVGcpnQgdJ9YgFgb2CtPQIVf8vNHIqKB?variables=org_id%3A${value}&useDefaultTimeRange=false&timeRange=%5B%7B%22t%22%3A%22relative%22%2C%22d%22%3A-2592000000%7D%5D`;
+      chrome.tabs.create({ url: url });
+    }
+  });
+
+  sumoSearchBtn.addEventListener('click', function() {
+    const orgId = sumoOrgIdInput.value;
+    if (orgId && orgId.length === 7 && !isNaN(Number(orgId))) {
+      const url = `https://service.sumologic.com/dashboard/QtkYSqtFAfl04GZbsJnXDQ82RooCDVGcpnQgdJ9YgFgb2CtPQIVf8vNHIqKB?variables=org_id%3A${orgId}&useDefaultTimeRange=false&timeRange=%5B%7B%22t%22%3A%22relative%22%2C%22d%22%3A-2592000000%7D%5D`;
+      chrome.tabs.create({ url: url });
+    }
+  });
+
+  sumoOrgIdInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && sumoOrgIdInput.value && sumoOrgIdInput.value.length === 7 && !isNaN(Number(sumoOrgIdInput.value))) {
+      const orgId = sumoOrgIdInput.value;
+      const url = `https://service.sumologic.com/dashboard/QtkYSqtFAfl04GZbsJnXDQ82RooCDVGcpnQgdJ9YgFgb2CtPQIVf8vNHIqKB?variables=org_id%3A${orgId}&useDefaultTimeRange=false&timeRange=%5B%7B%22t%22%3A%22relative%22%2C%22d%22%3A-2592000000%7D%5D`;
       chrome.tabs.create({ url: url });
     }
   });
